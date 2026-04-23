@@ -1,0 +1,5 @@
+ADONIS JOETH MERO BARCIA
+TYRONE ALAN ANCHUNDIA TRIVIÑO
+ANTHONY GABRIEL GUAMAN LUCIO
+
+En este trabajo realizamos una practica sobre los formularios utilizando fielset y su leyenda y ademas pusimos opciones con select y agregamos dos botones: uno como enviar y otro donde acepta los terminos, hicimos una tabla con datos sobre lenguaje informatico utilizando <thead><tbody> <tfoot> que nos permitieron partir por partes las tablas "rowspan" y  "colspan" para agrupar las casillas, agregamos imagenes de distintos tamaños con los nombres de lo integrantes y un alt con la descripcion de la imangen. En la accecibilidad se uso el comnado F12 en Chrome ára verficiar la accesibilidad con el LIGHTHOUSE y tomamos una captura de su resultado; y al final validamos con Validación W3C nuestro codigo y corregimos los errores que aparecieron y le tomas captura e hicimos en cada paso su respectivo Checkpoint con git con su commit.
