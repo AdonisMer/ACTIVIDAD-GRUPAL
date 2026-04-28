@@ -1,0 +1,51 @@
+/* ============ RESET UNIVERSAL ============ */
+*, *::before, *::after {
+ box-sizing: border-box;
+}
+:root {
+ /* Colores — elegir los suyos */
+ --color-primary: #07100a; /* Color principal (oscuro) */
+ --color-secondary: #07403b; /* Color secundario (acento) */
+ --color-accent: #5A9716; /* Color de destaque */
+ --color-bg: #dbe063; /* Fondo alternativo */
+ --color-text: #07100a; /* Texto principal */
+ --color-text-light: #fff8ff; /* Texto secundario */
+ /* Tipografía */
+ --font-body: "Segoe UI", "Times New Roman", sans-serif;
+ /* Espaciado */
+ --spacing-sm: 8px;
+  --spacing-md: 16px;
+ --spacing-lg: 32px;
+ --spacing-xl: 64px;
+ /* Bordes */
+ --radius: 8px;
+}
+body {
+ margin: 0; 
+ padding: 0;
+ font-family: var(--font-body);
+ font-size: 1rem;
+ line-height: 1.6;
+ color: var(--color-text);
+}
+h1{
+ color: var(--color-primary);
+ margin-top: 0;
+}
+h2, h3{
+ color: var(--color-secondary);
+ margin-top: 0;
+}
+a {
+ color: var(--color-secondary);
+ text-decoration: none;
+ transition: color 0.2s; 
+}
+a:hover {
+ color: var(--color-accent);
+}
+img {
+ max-width: 100%; 
+ height: auto;
+ display: block;
+}
