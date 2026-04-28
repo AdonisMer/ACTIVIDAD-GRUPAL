@@ -255,6 +255,18 @@ font-size: 3.5rem;
  transform: translateY(-4px);
  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); 
 }
+.project-card img {
+ display: block;
+ margin: auto;
+}
+.project-card figure {
+display: block;
+margin: 0;
+text-align: center;
+width: 100%;
+height: 200px;
+object-fit: cover;
+}
 #hero img {
  width: 300%;
  height: 400px;
@@ -266,19 +278,19 @@ font-size: 3.5rem;
  color: var(--color-primary);
  font-size: 1.15rem;
  }
-#hero p {
+.project-card p {
  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
  margin: 0;
  color: #07403b;
  font-size: 0.92rem;
 }
-#premios {
- width: 100%;
+table, th, td{
+ width: 50%;
+ border: 1px solid black;
  border-collapse: collapse; 
- background-color: white;
+ background-color: rgb(124, 122, 122);
  border-radius: var(--radius);
  overflow: hidden;
- border:3;
 }
 thead {
  background-color: var(--color-primary);
@@ -301,5 +313,93 @@ tbody td {
  border-bottom: 1px solid #e0e0e0;
 }
 tbody tr:hover td {
- background-color: #f8f9fa; /* Resaltado al pasar el mouse */
+ background-color: #f8f9fa; 
+}
+fieldset {
+ border: 1px solid #e0e0e0;
+ border-radius: var(--radius);
+ padding: var(--spacing-lg);
+ background-color: white;
+}
+legend {
+ font-size: 1.1rem;
+ font-weight: 600;
+ color: var(--color-primary);
+ padding: 0 var(--spacing-sm);
+}
+label {
+ display: block; 
+ margin-bottom: 2px;
+ font-weight: 500;
+ font-size: 0.95rem;
+}
+input, select, textarea {
+ width: 25%;
+ padding: 10px 12px;
+ font-size: 1rem;
+ font-family: var(--font-body);
+ border: 1px solid #e0e0e0;
+ border-radius: var(--radius);
+ margin-bottom: var(--spacing-md);
+ transition: border-color 0.2s;
+}
+input:focus,
+select:focus,
+textarea:focus {
+ outline: 2px solid var(--color-secondary);
+ outline-offset: 2px;
+ border-color: var(--color-secondary);
+}
+button {
+ padding: 10px 24px;
+ font-size: 1rem;
+ font-weight: 600;
+ border: none;
+ border-radius: var(--radius);
+ cursor: pointer;
+ transition: background-color 0.2s;
+}
+button[type="submit"] {
+ background-color: var(--color-secondary);
+ color: white;
+}
+button[type="submit"]:hover {
+ background-color: #026d7a; 
+}
+button[type="reset"] {
+ background-color: transparent;
+ color: var(--color-text-light);
+ border: 1px solid #e0e0e0;
+}
+button {
+ padding: 10px 24px;
+ font-size: 1rem;
+ font-weight: 600;
+ border: none;
+ border-radius: var(--radius);
+ cursor: pointer; 
+ transition: background-color 0.2s;
+}
+button[type="submit"] {
+ background-color: var(--color-secondary);
+ color: white;
+}
+button[type="submit"]:hover {
+ background-color: #026d7a; 
+}
+button[type="reset"] {
+ background-color: transparent;
+ color: var(--color-text-light);
+ border: 1px solid #e0e0e0;
+}
+footer {
+ text-align: left;
+ padding: var(--spacing-lg);
+ background-color: var(--color-primary);
+ color: white;
+ font-size: 0.9rem;
+}
+footer p {
+ margin: 4px 0;
+ opacity: 0.85;
 }
