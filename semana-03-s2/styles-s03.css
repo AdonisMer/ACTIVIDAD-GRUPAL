@@ -107,10 +107,12 @@ nav {
  background-color: var(--color-text-light);
 }
 .section h2 {
- font-size: 3.5rem;
- color: var(--color-text);
- margin-bottom: var(--spacing-sm);
- margin-top: 0;
+ font-size: 3rem;
+ color: var(--color-primary);
+ margin-bottom: var(--spacing-lg);
+ padding-bottom: var(--spacing-sm);
+ border-bottom: 3px solid var(--color-secondary);
+ display: inline-block; 
 }
 .section2 {
  display: flex;
@@ -124,9 +126,11 @@ nav {
 }
 .section2 h2 {
  font-size: 3.5rem;
- color: var(--color-text);
- margin-bottom: var(--spacing-sm);
- margin-top: 0;
+ color: var(--color-primary);
+ margin-bottom: var(--spacing-lg);
+ padding-bottom: var(--spacing-sm);
+ border-bottom: 3px solid var(--color-secondary);
+ display: inline-block;
 }
 .section2 h3 {
  font-size: 2rem;
@@ -147,8 +151,10 @@ nav {
 #metricas h2 {
  font-size: 3.5rem;
  color: var(--color-primary);
- margin-bottom: var(--spacing-sm);
- margin-top: 0;
+ margin-bottom: var(--spacing-lg);
+ padding-bottom: var(--spacing-sm);
+ border-bottom: 3px solid var(--color-secondary);
+ display: inline-block;
 }
 #metricas dt {
  font-size: 1.5rem;
@@ -177,8 +183,10 @@ nav {
 #glosario h2 {
  font-size: 3.5rem;
  color: var(--color-primary);
- margin-bottom: var(--spacing-sm);
- margin-top: 0;
+ margin-bottom: var(--spacing-lg);
+ padding-bottom: var(--spacing-sm);
+ border-bottom: 3px solid var(--color-secondary);
+ display: inline-block;
 }
 
 #faq {
@@ -192,10 +200,12 @@ nav {
  background-color: var(--color-text-light);
 }
 #faq h2 {
- font-size: 1.5rem;
+ font-size: 3.5rem;
  color: var(--color-primary);
- margin-bottom: var(--spacing-sm);
- margin-top: 0;
+ margin-bottom: var(--spacing-lg);
+ padding-bottom: var(--spacing-sm);
+ border-bottom: 3px solid var(--color-secondary);
+ display: inline-block;
 }
 #faq summary {
  font-size: 1.5rem;
@@ -215,8 +225,81 @@ nav {
  background-color: var(--color-bg);
 }
 #equipo h2 {
- font-size: 3.5rem;
+font-size: 3.5rem;
  color: var(--color-primary);
- margin-bottom: var(--spacing-sm);
- margin-top: 0;
+ margin-bottom: var(--spacing-lg);
+ padding-bottom: var(--spacing-sm);
+ border-bottom: 3px solid var(--color-secondary);
+ display: inline-block;
+}
+
+#premios {
+ display: flex;
+ gap: var(--spacing-lg); 
+ flex-wrap: wrap; 
+}
+.project-grid{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.project-card{
+    flex: 1 1 280px;
+    background: white;
+    border: 1px solid #000000;
+    border-top: 4px solid teal;
+    border-radius: 10px;
+    padding: 20px;
+}
+.project-card:hover {
+ transform: translateY(-4px);
+ box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12); 
+}
+#hero img {
+ width: 300%;
+ height: 400px;
+ object-fit: cover;
+}
+.section2 h3 {
+ padding: var(--spacing-md) var(--spacing-md) 0;
+ margin: 0;
+ color: var(--color-primary);
+ font-size: 1.15rem;
+ }
+#hero p {
+ padding: var(--spacing-sm) var(--spacing-md) var(--spacing-md);
+ margin: 0;
+ color: #07403b;
+ font-size: 0.92rem;
+}
+#premios {
+ width: 100%;
+ border-collapse: collapse; 
+ background-color: white;
+ border-radius: var(--radius);
+ overflow: hidden;
+ border:3;
+}
+thead {
+ background-color: var(--color-primary);
+}
+thead th {
+ color: white;
+ padding: 12px var(--spacing-md);
+ text-align: left;
+ font-weight: 600;
+}
+tbody th {
+ background-color: #eef2f7;
+ padding: 10px var(--spacing-md);
+ text-align: left;
+ font-weight: 600;
+ color: var(--color-primary);
+}
+tbody td {
+ padding: 10px var(--spacing-md);
+ border-bottom: 1px solid #e0e0e0;
+}
+tbody tr:hover td {
+ background-color: #f8f9fa; /* Resaltado al pasar el mouse */
 }
