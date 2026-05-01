@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portafolio profesional de Juan Pérez — Desarrollador Web">
+  <link rel="stylehoot" href="style.css">
+  <title>Juan Pérez — Portafolio</title>
+</head>
+<body>
+
+  <!-- ============ NAVEGACIÓN ============ -->
+  <nav>
+    <a href="#" class="nav-logo">JuanDev</a>
+    <div class="nav-links">
+      <a href="#about">Sobre mí</a>
+      <a href="#skills">Habilidades</a>
+      <a href="#projects">Proyectos</a>
+      <a href="#contact">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <h1>Juan Pérez</h1>
+    <p>Estudiante de Ingeniería en Software · ULEAM</p>
+    <p>Apasionado por el desarrollo web y las aplicaciones modernas.</p>
+  </header>
+
+  <main>
+
+    <!-- ============ SOBRE MÍ ============ -->
+    <section id="about">
+      <h2>Sobre mí</h2>
+      <p>Soy estudiante de cuarto semestre de Ingeniería en Software en la Universidad Laica Eloy Alfaro de Manabí. Me interesa el desarrollo frontend, la experiencia de usuario y las tecnologías emergentes.</p>
+      <p>En mi tiempo libre disfruto aprender nuevas tecnologías, contribuir a proyectos open source y participar en hackathons universitarios.</p>
+    </section>
+
+    <!-- ============ HABILIDADES (TABLA) ============ -->
+    <section id="skills">
+      <h2>Habilidades Técnicas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Categoría</th>
+            <th scope="col">Tecnología</th>
+            <th scope="col">Nivel</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" rowspan="3">Lenguajes</th>
+            <td>HTML5</td>
+            <td>Avanzado</td>
+          </tr>
+          <tr>
+            <td>CSS3</td>
+            <td>Intermedio</td>
+          </tr>
+          <tr>
+            <td>JavaScript</td>
+            <td>Básico</td>
+          </tr>
+          <tr>
+            <th scope="row" rowspan="2">Herramientas</th>
+            <td>VS Code</td>
+            <td>Avanzado</td>
+          </tr>
+          <tr>
+            <td>Git / GitHub</td>
+            <td>Intermedio</td>
+          </tr>
+          <tr>
+            <th scope="row" rowspan="2">Frameworks</th>
+            <td>Svelte</td>
+            <td>Básico</td>
+          </tr>
+          <tr>
+            <td>Bootstrap</td>
+            <td>Básico</td>
+          </tr>
+          <tr>
+            <th scope="row">Bases de datos</th>
+            <td colspan="2">PostgreSQL (en aprendizaje)</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============ PROYECTOS ============ -->
+    <section id="projects" class="projects">
+      <h2>Mis Proyectos</h2>
+      <div class="project-grid">
+        <article class="project-card">
+          <img src="https://placehold.co/600x400/1e2761/ffffff?text=Proyecto+1" alt="Captura del proyecto calculadora de propinas">
+          <h3>Calculadora de Propinas</h3>
+          <p>Aplicación web que calcula propinas según el monto, porcentaje y número de personas. Construida con HTML, CSS y JavaScript vanilla.</p>
+        </article>
+        <article class="project-card">
+          <img src="https://placehold.co/600x400/028090/ffffff?text=Proyecto+2" alt="Captura del proyecto lista de tareas">
+          <h3>Lista de Tareas</h3>
+          <p>App de gestión de tareas con funcionalidad de agregar, completar y eliminar. Incluye persistencia en localStorage.</p>
+        </article>
+        <article class="project-card">
+          <img src="https://placehold.co/600x400/f96167/ffffff?text=Proyecto+3" alt="Captura del proyecto clima app">
+          <h3>Clima App</h3>
+          <p>Consulta el clima de cualquier ciudad usando la API de OpenWeather. Muestra temperatura, humedad y condiciones actuales.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ CONTACTO (FORMULARIO) ============ -->
+    <section id="contact">
+      <h2>Contacto</h2>
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>Envíame un mensaje</legend>
+
+          <label for="name">Nombre completo</label>
+          <input type="text" id="name" name="name" required minlength="3" placeholder="Tu nombre completo">
+
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required placeholder="tu@email.com">
+
+          <label for="subject">Asunto</label>
+          <select id="subject" name="subject" required>
+            <option value="">— Selecciona un asunto —</option>
+            <option value="trabajo">Oportunidad laboral</option>
+            <option value="proyecto">Colaboración en proyecto</option>
+            <option value="otro">Otro</option>
+          </select>
+
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="5" required minlength="20" placeholder="Escribe tu mensaje (mínimo 20 caracteres)"></textarea>
+
+          <button type="submit">Enviar mensaje</button>
+          <button type="reset">Limpiar</button>
+        </fieldset>
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <p>&copy; 2026 Juan Pérez. Todos los derechos reservados.</p>
+    <p>Desarrollado como proyecto académico — IS-403 Aplicaciones para el Cliente Web</p>
+  </footer>
+
+</body>
+</html>
