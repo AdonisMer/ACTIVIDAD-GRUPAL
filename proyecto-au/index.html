@@ -14,9 +14,9 @@
         <div class="nav-links">
         <ul>
             <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#producto1">Producto 1</a></li>
-            <li><a href="#producto2">Producto 2</a></li>
-            <li><a href="#producto3">Producto 3</a></li>
+            <li><a href="#consulta">Consulta Médica</a></li>
+            <li><a href="#registro">Registro de Pacientes</a></li>
+            <li><a href="#farmacia">Farmacia con producto</a></li>
             <li><a href="#equipo">Equipo</a></li>
         </ul>  
         </div>
@@ -24,22 +24,97 @@
     </header>
     <main> 
         <section id="inicio">  
-            <h1> Nombre del Proyecto </h1>
+            <h1> Página para un Sistema de Gestión Médica </h1>
             <section class="problema">
             <h2> Problema </h2>
+            <p>.</p>
         </section>
         <section class="publico_objetivo">
             <h2> Público Objetivo </h2>
+            <p>.</p>
         </section>
         </section>
-        <section id="producto1" class="producto1">
-            <h2> Producto1 </h2>
+        <section id="consulta" class="producto1">
+            <h2> Consulta Médica </h2>
+            <table class="tabla1">
+                <thead>
+                    <tr>
+                        <th>Especialidad</th>
+                        <th>Nombre del Médico</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Cardiología</td>
+                        <td>Dr. Juan Pérez</td>
+                    </tr>
+                    <tr>
+                        <td>Dermatología</td>
+                        <td>Dra. María Gómez</td>
+                    </tr>
+                    <tr>
+                        <td>Pediatría</td>
+                        <td>Dra. Ana López</td>
+                    </tr>
+                    <tr>
+                        <td>Neurología</td>
+                        <td>Dr. Carlos Rodríguez</td>
+                    </tr>
+                    <tr>
+                        <td>Gastroenterología</td>
+                        <td>Dra. Laura Martínez</td>
+                    </tr>
+                    <tr>
+                        <td>Ortopedia</td>
+                        <td>Dr. Andrés Sánchez</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2">Para más información, contáctenos al 123-456-7890</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <br>
+            <form action="#" class="formulario1">
+                <fieldset>
+                    <legend>Información de la Consulta</legend>
+                    <label for="especialidad">Especialidad:</label>
+                    <select id="especialidad" name="especialidad" required>
+                        <option value="">Seleccione una especialidad</option>
+                        <option value="cardiologia">Cardiología</option>
+                        <option value="dermatologia">Dermatología</option>
+                        <option value="pediatria">Pediatría</option>
+                        <option value="neurologia">Neurología</option>
+                        <option value="gastroenterologia">Gastroenterología</option>
+                        <option value="ortopedia">Ortopedia</option>
+                    </select>
+                    <label for="fecha">Fecha de la Consulta:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                    <label for="hora">Hora de la Consulta:</label>
+                    <input type="time" id="hora" name="hora" min="08:00" max="18:00" required>
+                </fieldset>
+                <br>
+                <fieldset>
+                    <legend>Información Personal del Paciente</legend>
+                    <label for="nombre-completo">Nombre Completo:</label>
+                    <input type="text" id="nombre-completo" name="nombre-completo" placeholder="Nombre Completo" required>
+                    <label for="cedula">Cédula de Identidad:</label>
+                    <input type="text" id="cedula" name="cedula" placeholder="Cédula de Identidad" required>
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" placeholder="Correo Electrónico">
+                    <label for="celular">Número de Celular:</label>
+                    <input type="text" id="celular" name="celular" placeholder="Número de Celular">
+                </fieldset>
+                <br>
+                <button type="submit">Registrar Consulta</button>
+            </form>
         </section>
-        <section id="producto2" class="producto2">
-            <h2> Producto2 </h2>
+        <section id="registro" class="producto2">
+            <h2> Registro de Pacientes </h2>
         </section>
-        <section id="producto3" class="producto3">
-            <h2> Producto3 </h2>
+        <section id="farmacia" class="producto3">
+            <h2> Farmacia con producto </h2>
         </section>
         <section id="equipo"> 
         <h2>Equipo</h2>

@@ -1,18 +1,19 @@
-/* ============ RESET UNIVERSAL ============ */
 *, *::before, *::after {
     box-sizing: border-box;
 }
 :root {
-    --color-primary: #05271f; /*Fondo principal*/
-    --color-secondary: #0c362d; /*Fondo secundario*/
+    --color-primary: #839989; /*Fondo principal*/
+    --color-secondary: #05271f; /*Fondo secundario*/
+    --color-tertiary: #0c362d; /*Fondo terciario*/
+    --color-quaternary: #c0d1b2; /*Fondo quaternario*/
+    --color-quinary: #425851; /*Fondo quinary*/
     --color-text-title: #05271f; /*Texto de los títulos*/
-    --color-accent: #425851; 
-    --color-bg: #839989;
-    --coloe-bg2: #c0d1b2; 
     --color-text: #07100a; /*Texto principal*/
     --color-text-logo: #ffffff; /*Texto del logo*/
     --color-nav: #05271f; /*Fondo de la barra de navegación*/
     --color-text-nav: #ffffff; /*Texto de la barra de navegación*/
+    --color-accent: #4CAF50; /*Color de acento*/
+    --background-color: #f5f5f5; /*Color de fondo general*/
     --font-logo: "Segoe UI Black";
     --font-nav: "helvetica neue", sans-serif;
     --spacing-sm: 8px;
@@ -26,7 +27,7 @@
     flex-direction: row;
     gap: 20px; 
     min-height: 100vh;
-    background-color: var(--color-bg);
+    background-color: var(--color-primary);
     padding: var(--spacing-lg);
 }
 body {
@@ -40,9 +41,10 @@ body {
 h1, h2{
     color: var(--color-text-title);
     margin-top: 0;
+    font-weight: bold;
 }
 a {
-    color: var(--color-secondary);
+    color: var(--color-tertiary);
     text-decoration: none;
     transition: color 0.2s; 
 }
@@ -93,22 +95,105 @@ nav {
     color: var(--color-accent);
     border-bottom-color: var(--color-accent);
 }
+#inicio {
+    padding: 60px 20px;
+    background-color: var(--color-primary);
+    text-align: center;
+}
+.producto1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: var(--color-quaternary);
+}
+.tabla1 {
+    background-color: white;
+}
+.tabla1 th {
+    background-color: var(--color-secondary);
+    color: white;
+}
+.tabla1 td {
+    border: 1px solid var(--color-secondary);
+    padding: 8px;
+    text-align: center;
+}
+.formulario1 {
+    color: var(--color-text);
+    background-color: #aaaaaa;
+    text-align: left;
+    padding: 20px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: var(--color-secondary) solid 1px;
+}
+.formulario1 legend {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.formulario1 label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+.formulario1 input, .formulario1 select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid var(--color-secondary);
+    border-radius: var(--radius);
+}
+.formulario1 button {
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: var(--background-color) 0.3s;
+}
+.formulario1 button:hover {
+    background-color: var(--color-quinary);
+}     
+.producto2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: var(--color-primary);
+}
+.producto3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px;
+    background-color: var(--color-quaternary);
+}
 #equipo {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 60px 20px;
-    background-color: var(--color-bg);
+    background-color: var(--color-primary);
 }
 .miembros {
     display: flex;
     flex-direction: row;
     justify-content: center;
     gap: 20px;
+    align-items: center;
 }
 #equipo img {
     width:150px;
     height:150px;
     border-radius:50%;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+footer {
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: var(--color-nav);
+    color: var(--color-text-nav);
 }
