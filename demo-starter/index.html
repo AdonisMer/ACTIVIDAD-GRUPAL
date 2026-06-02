@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de Productos — Semana 6 (punto de partida S7)</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <main class="contenedor">
+      <h1>Gestor de Productos</h1>
+      <p class="subtitulo">Versión monolítica de Semana 6 — todo en <code>main.ts</code></p>
+
+      <form id="form-producto" novalidate>
+        <div class="campo">
+          <label for="nombre">Nombre</label>
+          <input id="nombre" name="nombre" type="text" />
+          <span class="error" id="error-nombre"></span>
+        </div>
+
+        <div class="campo">
+          <label for="precio">Precio</label>
+          <input id="precio" name="precio" type="number" step="0.01" />
+          <span class="error" id="error-precio"></span>
+        </div>
+
+        <div class="campo">
+          <label for="stock">Stock</label>
+          <input id="stock" name="stock" type="number" />
+          <span class="error" id="error-stock"></span>
+        </div>
+
+        <div class="campo">
+          <label for="categoria">Categoría</label>
+          <select id="categoria" name="categoria">
+            <option value="">Selecciona…</option>
+            <option value="Bebidas">Bebidas</option>
+            <option value="Snacks">Snacks</option>
+            <option value="Lacteos">Lácteos</option>
+            <option value="Panaderia">Panadería</option>
+          </select>
+          <span class="error" id="error-categoria"></span>
+        </div>
+
+        <button type="submit">Agregar producto</button>
+      </form>
+
+      <section class="panel">
+        <h2>Productos</h2>
+        <p id="contador" class="contador"></p>
+        <ul id="lista-productos" class="lista"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
