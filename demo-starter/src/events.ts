@@ -1,18 +1,7 @@
 import type { Producto } from "./types";
-import {
-  validarCategoria,
-  validarStock,
-  validarPrecio,
-  validarNombre
-} from "./validators";
+import {validarCategoria,validarStock,validarPrecio,validarNombre} from "./validators";
 
-import {
-  actualizarContador,
-  elementos,
-  limpiarErrores,
-  mostrarError,
-  renderizar
-} from "./dom";
+import {actualizarContador,elementos,limpiarErrores,mostrarError,renderizar} from "./dom";
 
 const productos: Producto[] = [];
 
@@ -21,7 +10,6 @@ function refrescar() {
   actualizarContador(productos);
 }
 
-// ----- FORM SUBMIT -----
 function registrarEnvio() {
   elementos.form.addEventListener("submit", (evento: SubmitEvent) => {
     evento.preventDefault();
@@ -32,29 +20,26 @@ function registrarEnvio() {
     const rStock = validarStock(elementos.stock.value);
     const rCategoria = validarCategoria(elementos.categoria.value);
 
-    let hayError = false;
+    if (!rNombre.ok) mostrarError("nombre", rNombre.error);
+    if (!rPrecio.ok) mostrarError("precio", rPrecio.error);
+    if (!rStock.ok) mostrarError("stock", rStock.error);
+    if (!rCategoria.ok) mostrarError("categoria", rCategoria.error);
 
-    if (!rNombre.ok) { mostrarError("nombre", rNombre.error); hayError = true; }
-    if (!rPrecio.ok) { mostrarError("precio", rPrecio.error); hayError = true; }
-    if (!rStock.ok) { mostrarError("stock", rStock.error); hayError = true; }
-    if (!rCategoria.ok) { mostrarError("categoria", rCategoria.error); hayError = true; }
+    if (rNombre.ok && rPrecio.ok && rStock.ok && rCategoria.ok) {
+      productos.push({
+        id: crypto.randomUUID(), 
+        nombre: rNombre.valor,
+        precio: rPrecio.valor,
+        stock: rStock.valor,
+        categoria: rCategoria.valor
+      });
 
-    if (hayError) return;
-
-productos.push({
-  id: Date.now().toString(),
-  nombre: rNombre.valor,
-  precio: rPrecio.valor,
-  stock: rStock.valor,
-  categoria: rCategoria.valor
-});
-
-    elementos.form.reset();
-    refrescar();
+      elementos.form.reset();
+      refrescar();
+    }
   });
 }
 
-// ----- DELEGACIÓN (BIEN HECHO) -----
 function registrarDelegacionEliminar() {
   elementos.lista.addEventListener("click", (evento: MouseEvent) => {
     const target = evento.target as HTMLElement;
@@ -62,8 +47,6 @@ function registrarDelegacionEliminar() {
     if (target.matches(".btn-eliminar")) {
       const li = target.closest("li");
       const id = li?.dataset.id;
-
-      if (!id) return; 
 
       const indice = productos.findIndex(p => p.id === id);
       if (indice !== -1) {
@@ -74,7 +57,6 @@ function registrarDelegacionEliminar() {
   });
 }
 
-// ----- UX -----
 function registrarValidacionesReactivas() {
   elementos.nombre.addEventListener("input", () => mostrarError("nombre", ""));
   elementos.precio.addEventListener("input", () => mostrarError("precio", ""));
@@ -82,7 +64,6 @@ function registrarValidacionesReactivas() {
   elementos.categoria.addEventListener("change", () => mostrarError("categoria", ""));
 }
 
-// ----- INIT -----
 export function iniciar() {
   registrarEnvio();
   registrarDelegacionEliminar();
